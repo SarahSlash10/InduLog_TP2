@@ -20,12 +20,12 @@ jobs:
     - uses: actions/checkout@v3
     - name: Login to registry
       run: echo ${{ secrets.PERSONAL_TOKEN }} | 
-        docker login ghcr.io -u SarahSlash10 --password-stdin
+        docker login ghcr.io -u sarahslash10 --password-stdin
     - name: Build the Docker image
       run: docker build . --file Dockerfile \
-        --tag ghcr.io/SarahSlash10/tp2:latest
+        --tag ghcr.io/sarahslash10/tp2:latest
     - name: Push the image into the registry
-      run: docker push ghcr.io/SarahSlash10/tp2:latest
+      run: docker push ghcr.io/sarahslash10/tp2:latest
     
   build:
 
