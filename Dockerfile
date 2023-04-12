@@ -1,5 +1,11 @@
 FROM python:3.9
 
+RUN useradd --create-home appuser
+
+RUN mkdir /code && chown appuser:appuser /code
+
+USER appuser
+
 WORKDIR /code
 
 COPY ./setup.py /code/setup.py
