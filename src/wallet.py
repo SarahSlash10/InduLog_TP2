@@ -16,8 +16,6 @@ class Wallet(object):
     def spend_cash(self, amount):
         self.spend_money(amount)
 
-        self.balance -= amount
-
     def add_cash(self, amount):
         """Adds the specified amount of money to the current Wallet object"""
         self.balance += amount
